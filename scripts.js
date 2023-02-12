@@ -47,7 +47,9 @@ function speechToText() {
       downloadBtn.disabled = false;
     };
     recognition.onspeechend = () => {
+      result.innerHTML += "<br>  ";
       speechToText();
+
     };
     recognition.onerror = (event) => {
       stopRecording();
